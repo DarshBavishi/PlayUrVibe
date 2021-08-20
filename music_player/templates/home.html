@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Segoe UI:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">    
+<link rel="stylesheet"  href="../static/stylesheets/theme.css">
+    <title>PlayUrVibe</title>
+    <link rel="icon" href="../static/images/logo.svg" >
+    <style>
+         h2 {
+  position: absolute;
+  top: 37%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+
+  font-family: Segoe UI;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+
+  color: #dfdfdf;
+}
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center">Welcome</h1>
+    {% for mess in get_flashed_messages() %}
+        <div class="" role="alert">
+        <p style="color: rgb(235, 68, 68);; font-family: Segoe UI;text-align: center;font-size:20px;" id='f-msg' >{{mess}}</p>
+        </div>
+    {% endfor %}
+    <h2>Music gives a soul to universe,wings to the mind,flight to the imagination and life to everything.</h2>
+    
+    <!-- <div class="video">
+        <img src="bg1.mp4" alt="bg">
+    </div> -->
+ 
+    <nav class="hov">
+        <div class="image">
+            
+            <img src="../static/images/logo.svg"> 
+           </div>
+        <div class="logo">
+            <h4>PlayUrVibe</h4>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/login">Sign In/Up</a></li>
+             <li><a href="/contact">Contact</a></li>
+            
+        </ul>
+    </nav>
+      <div class="marquee">
+        <ul class="marquee-content">
+          <li><img src="https://i.ibb.co/VBnmyLr/Reputation.jpg" alt="Reputation" border="0"></li>
+          <li><img src="https://i.ibb.co/LnvQyJG/Bts-love-yourself.jpg" alt="Bts love yourself" border="0"></li>
+          <li><img src="https://i.ibb.co/n1BT6cf/Dua-lipa-future-nostalgia.jpg" alt="Dua lipa future nostalgia" border="0"></li>
+          <li><img src="https://i.ibb.co/bXR8cvB/Mercy.jpg" alt="Mercy" border="0"></li>
+          <li><img src="https://i.ibb.co/dDtHC43/Positions-Album-Cover.jpg" alt="Positions_–_Album_Cover" border="0"></li>
+          <li><img src="https://i.ibb.co/qs0yDBs/Badlands-halsey.jpg" alt="Badlands halsey" border="0"></li>
+          <li><img src="https://i.ibb.co/r4KmJ3j/Hollywoods-bleeding.jpg" alt="Hollywoods bleeding" border="0">
+    </li>
+          <li><img src="https://i.ibb.co/CvfMWvh/Taylor-Swift-Fearless-Version.jpg" alt="Taylor-Swift-Fearless-Version" border="0"></li>
+          <li><img src="https://i.ibb.co/vJhVYGj/Ar-rahman.jpg" alt="Ar rahman" border="0"></li>
+          <li><img src="https://i.ibb.co/840ZWcy/Lana-del-ray.jpg" alt="Lana del ray" border="0"></li>
+          <li><img src="https://i.ibb.co/4RHNmdN/Billie-eilish.jpg" alt="Billie eilish" border="0"></li>
+          <li><img src="https://i.ibb.co/SxNjCRJ/Jb.jpg" alt="Jb" border="0"></li>
+          <li><img src="https://i.ibb.co/p0cn0FP/wow.jpg" alt="wow" border="0"></a></li>
+ 
+          <li><img src="https://i.ibb.co/qs0yDBs/Badlands-halsey.jpg" alt="Badlands halsey" border="0"></li>
+          <li><img src="https://i.ibb.co/n1BT6cf/Dua-lipa-future-nostalgia.jpg" alt="Dua lipa future nostalgia" border="0"></li>
+          <li><img src="https://i.ibb.co/3d5HZYC/Yo-Yo-Honey-Singh.jpg" alt="Yo-Yo-Honey-Singh" border="0"></li>
+          <li><img src="https://i.ibb.co/gJ2DCwh/Shreya-ghoshal.jpg" alt="Shreya ghoshal" border="0"></li>
+          
+        </ul>
+      </div>
+</body>
+<script>
+
+    var fmsg = document.getElementById("f-msg");
+            function flash_disappear(){
+                fmsg.textContent = "";
+                }
+            setTimeout(flash_disappear,3000);
+    const root = document.documentElement;
+const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
+const marqueeContent = document.querySelector("ul.marquee-content");
+ 
+root.style.setProperty("--marquee-elements", marqueeContent.children.length);
+ 
+for(let i=0; i<marqueeElementsDisplayed; i++) {
+marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+}
+ 
+</script>
+</html>

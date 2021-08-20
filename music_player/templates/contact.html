@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Segoe UI:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">     
+<link rel="stylesheet"  href="../static/stylesheets/theme.css">
+    <title>PlayUrVibe</title>
+    <link rel="icon" href="../static/images/logo.svg" >
+    <style>
+          .form-box {
+  width: 500px;
+
+  height: 500px;
+
+  position: relative;
+
+  top: 50px;
+
+  left: 60%;
+  /* margin:10px auto 10px; */
+
+  background: #000;
+  box-shadow: 0 4px 8px 0 rgba(200, 100, 5, 0.1),
+    0 4px 8px 0 rgba(200, 100, 5, 0.1);
+
+  border: 2px solid #000000;
+  border-radius: 25px;
+}
+.main-heading {
+  font-family: "Bebas Neue", cursive;
+  font-size: 35px;
+  font-weight: 400;
+  letter-spacing: 2.5px;
+  color:rgba(202, 100, 5, 0.76);
+  padding-bottom: 25px;
+}
+    </style>
+</head>
+<body>
+    
+    <nav class="hov">
+         <div class="image">
+            <img src="../static/images/logo.svg"> 
+           </div>
+        <div class="logo">
+            <h4>PlayUrVibe</h4>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/login">Sign In/Up</a></li>
+            <li><a href="/feedback">Contact</a></li>
+            
+        </ul>
+    </nav>
+          </div>
+                <div class="row">
+                <div class="col-1">
+                    <div class="form-box ">
+                        <div class="form">
+                            <form class="Contact-form" method="POST">
+                                <center><h3 class="main-heading">Contact form</h3></center>
+                                    {# This hidden_tag is a CSRF security feature. #}
+                                    {{ form.hidden_tag() }}
+                                    {% if form.email.errors %}
+                                        {{ form.email(placeholder="Email") }}
+                                        <div style="font-size: 80%;color: #dc3545;">
+                                            {% for error in form.email.errors %}
+                                                <span>{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        {{ form.email(placeholder="Email") }}
+                                    {% endif %}
+                                    <br>
+                                    {% if form.name.errors %}
+                                        {{ form.name(placeholder="Name") }}
+                                        <div style="font-size: 80%;color: #dc3545;">
+                                            {% for error in form.name.errors %}
+                                                <span>{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        {{ form.name(placeholder="Name") }}
+                                    {% endif %}
+                                    <br>
+                                    {% if form.subject.errors %}
+                                        {{ form.subject(class="input1",rows="4", cols="50", placeholder="Write Something...") }}
+                                        <div style="font-size: 80%;color: #dc3545;">
+                                            {% for error in form.subject.errors %}
+                                                <span>{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        {{ form.subject(class="input1",rows="4", cols="50", placeholder="Write Something...") }}
+                                    {% endif %}
+                                    <br>
+                                    {% for mess in get_flashed_messages() %}
+                                        <div class="" role="alert">
+                                        <p style="color: rgb(194, 49, 49); font-family: Segoe UI;" id='f-msg' >{{mess}}</p>
+                                        </div>
+                                    {% endfor %}
+                                    {{ form.submit(style="background-color: rgba(202, 100, 5, 0.76);color: white;") }}
+                            </form>
+                         </div>
+                    </div>
+                </div>
+                <div class="col-1">
+                   
+                </div>
+            </div>
+        </body>
+        <script>
+            var fmsg = document.getElementById("f-msg");
+            function flash_disappear(){
+                fmsg.textContent = "";
+                }
+            setTimeout(flash_disappear,3000);
+        </script>
+        </html>   

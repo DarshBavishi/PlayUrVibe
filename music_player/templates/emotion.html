@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Segoe UI:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">    
+<link rel="stylesheet"  href="../static/stylesheets/theme.css">
+    <title>PlayUrVibe</title>
+    <link rel="icon" href="../static/images/logo.svg" >
+    <style>
+     .button
+        {
+        background-color: rgba(202, 100, 5, 0.76);
+        border: none;
+        color: white;
+        padding: 40px 10px;
+        border-radius: 8px;
+        width: 250px;
+        margin-top:130px;
+        bottom: 50%;
+        margin-left:400px;
+        text-align: center;
+        text-decoration: none;
+        
+        font-size: 20px;
+        cursor: pointer;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        
+        }
+        .file {
+          opacity: 0;
+          width: 0.1px;
+          height: 0.1px;
+          position: absolute;
+        }
+
+        .file-input label {
+        background-color: rgba(202, 100, 5, 0.76);
+        border: none;
+        color: white;
+        padding: 40px 40px;
+        border-radius: 8px;
+        width: 250px;
+        margin-top:100px;
+        bottom: 50%;
+        margin-left:110px;
+        text-align: center;
+        text-decoration: none;
+        
+        font-size: 20px;
+        cursor: pointer;
+        font-family: Segoe UI;
+        }
+
+
+        .file-name {
+          position: absolute;
+          bottom: -35px;
+          left: 10px;
+          font-size: 0.85rem;
+          color: #555;
+         
+        }
+        .submit{
+        background-color: rgba(202, 100, 5, 0.76);
+        border: none;
+        color: rgba(202, 100, 5, 0.76);
+        padding: 10px 10px;
+        border-radius: 8px;
+        width: 250px;
+        margin-top:0px;
+        margin-left:180px;
+        text-align: center;
+        text-decoration: none;
+        display:inline;
+        bottom:30%;
+        left:50%;
+        font-size: 20px;
+        
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        
+       }
+
+        input:hover + label,
+        input:focus + label {
+          transform: scale(1.02);
+        }
+
+        /* Adding an outline to the label on focus */
+        input:focus + label {
+          outline: 1px solid #000;
+          outline: -webkit-focus-ring-color auto 2px;
+        }
+                
+        .form-box1 {
+                
+          width: 800px;
+                
+          height: 400px;
+                
+          position: relative;
+                
+          top: 13%;
+                
+          left: 19%;
+                
+          background:#000;
+          box-shadow: 0 4px 8px 0 rgba(200, 100, 5, 0.1), 0 4px 8px 0 rgba(200, 100, 5,  0.1);
+                
+          border: 2px solid #000000;
+          border-radius: 25px;
+                
+            }
+             
+          .nav-links1 {
+          display: flex;
+          justify-content: space-around;
+          position: absolute;
+          width: 50%;
+          height: 26px;
+          right: 5%;
+          top: 5%;
+          font-family: "Bebas Neue", cursive;
+          font-style: normal;
+          font-weight: medium;
+          font-size: 20px;
+          line-height: 26px;
+          /* identical to box height */
+
+          text-align: center;
+        }
+        .nav-links1 li {
+          list-style: none;
+        }
+        .nav-links1 a {
+          color: rgb(252, 252, 252);
+          text-decoration: none;
+        }
+        .hov ul {
+            padding: 0;
+            list-style: none;
+            display: table;
+            text-align: center;
+          }
+          .hov li {
+            display: table-cell;
+            position: relative;
+          }
+          .hov a {
+            color: #fff;
+            font-family: Segoe UI;
+            text-decoration: none;
+            letter-spacing: 0.02em;
+
+            display: inline-block;
+          }
+          .hov a:after {
+            background: none repeat scroll 0 0 transparent;
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 1px;
+            left: 50%;
+
+            position: relative;
+            background: #fff;
+            transition: width 0.5s ease 0s, left 0.5s ease 0s;
+            width: 0;
+          }
+          .hov a:hover:after {
+            width: 100%;
+            left: 0;
+          }
+          h1 {
+            position: relative;
+            text-align: center;
+            top: 80px;
+            font-family: Segoe UI;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 40px;
+            line-height: 70px;
+            text-align: center;
+
+            color: #ffffff;
+          }
+          h5 {
+            position: absolute;
+            top: 26%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+
+            font-family: Segoe UI;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 25px;
+            line-height: 18px;
+            text-align: center;
+
+            color: #dfdfdf;
+          }
+          .logo {
+          position: absolute;
+          color: white;
+          letter-spacing: 3px;
+          font-size: 24px;
+          left: 5%;
+          top: 4.5%;
+          font-family: "Segoe UI";
+        }
+        .images img {
+            position: absolute;
+            left: 1%;
+            top: 4.5%;
+            width: 50px;
+            height: 5%;
+          }
+              
+    </style>
+</head>
+<body>
+    <h5>How do you want to detect your mood ?</h5>
+    <h1 style="text-align:center">Emotion</h1>
+    <h2></h2>
+    <nav class="hov">
+      <div class="image">
+        <a href="/home">
+        <img src="../static/images/logo.svg" />
+        </a>
+      </div>
+      <div class="logo">
+        <h4>PlayUrVibe</h4>
+      </div>
+    <ul class="nav-links1">
+      <li><a href="/home">Home</a></li>
+      <li><a href="/random">Random mode</a></li>
+      <li><a href="/emotion">Emotion mode</a></li>
+      <li><a href="/feedback">Contact</a></li>
+      <li><a href="/logout">Logout</a></li>
+    </ul>
+  </nav>
+    <div class="form-box1">
+        <form method="post"  enctype="multipart/form-data">
+            <div class="file-input">
+                {{ form.hidden_tag() }}
+                {% for mess in get_flashed_messages() %}
+                    <div class="" role="alert">
+                    <p style="color: rgb(194, 49, 49); font-family: Segoe UI; text-align: center;" id='f-msg' >{{mess}}</p>
+                    </div>
+                {% endfor %}
+                {{ form.picture(class="file") }}
+                <div style="margin-left: 30px" >
+                  <div style="display: inline;" >
+                  {{ form.picture.label(for="picture") }}                  
+                    <p class="file-name"></p>
+                    <button class="button" style="margin-left: 10px;" ><a href="/detect" style="color: white;text-decoration: none;" >Detect Your Live Mood</a></button>
+                  </div>
+                  
+                  <div style="display: block;" >
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <p class="submit" style="color:white; text-decoration: none; margin-left: 340px; text-align: center;">{{ form.submit(style ="background-color: transparent; border: 0; color: white;font-family: Segoe UI") }}  </p>          
+                  
+                  </div>
+                
+                </div>
+                
+                <!-- <div class="file-input">x
+                  <input type="file" id="file" class="file">
+            <label for="file">
+                Select file
+                <p class="file-name"></p>
+            </label>
+            </div> -->f
+            
+          </div>
+        </form>
+      </div>
+      
+     
+     
+    <!-- </div>
+      <div class="marquee">
+        <ul class="marquee-content">
+          <li><img src="https://i.ibb.co/VBnmyLr/Reputation.jpg" alt="Reputation" border="0"></li>
+          <li><img src="https://i.ibb.co/LnvQyJG/Bts-love-yourself.jpg" alt="Bts love yourself" border="0"></li>
+          <li><img src="https://i.ibb.co/n1BT6cf/Dua-lipa-future-nostalgia.jpg" alt="Dua lipa future nostalgia" border="0"></li>
+          <li><img src="https://i.ibb.co/bXR8cvB/Mercy.jpg" alt="Mercy" border="0"></li>
+          <li><img src="https://i.ibb.co/dDtHC43/Positions-Album-Cover.jpg" alt="Positions_–_Album_Cover" border="0"></li>
+          <li><img src="https://i.ibb.co/qs0yDBs/Badlands-halsey.jpg" alt="Badlands halsey" border="0"></li>
+          <li><img src="https://i.ibb.co/r4KmJ3j/Hollywoods-bleeding.jpg" alt="Hollywoods bleeding" border="0">
+    </li>
+          <li><img src="https://i.ibb.co/CvfMWvh/Taylor-Swift-Fearless-Version.jpg" alt="Taylor-Swift-Fearless-Version" border="0"></li>
+          <li><img src="https://i.ibb.co/vJhVYGj/Ar-rahman.jpg" alt="Ar rahman" border="0"></li>
+          <li><img src="https://i.ibb.co/840ZWcy/Lana-del-ray.jpg" alt="Lana del ray" border="0"></li>
+          <li><img src="https://i.ibb.co/4RHNmdN/Billie-eilish.jpg" alt="Billie eilish" border="0"></li>
+          <li><img src="https://i.ibb.co/SxNjCRJ/Jb.jpg" alt="Jb" border="0"></li>
+          <li><img src="https://i.ibb.co/p0cn0FP/wow.jpg" alt="wow" border="0"></a></li>
+ 
+          <li><img src="https://i.ibb.co/qs0yDBs/Badlands-halsey.jpg" alt="Badlands halsey" border="0"></li>
+          <li><img src="https://i.ibb.co/n1BT6cf/Dua-lipa-future-nostalgia.jpg" alt="Dua lipa future nostalgia" border="0"></li>
+          <li><img src="https://i.ibb.co/3d5HZYC/Yo-Yo-Honey-Singh.jpg" alt="Yo-Yo-Honey-Singh" border="0"></li>
+          <li><img src="https://i.ibb.co/gJ2DCwh/Shreya-ghoshal.jpg" alt="Shreya ghoshal" border="0"></li>
+          
+        </ul>
+      </div> -->
+</body>
+<script>
+
+  var fmsg = document.getElementById("f-msg");
+            function flash_disappear(){
+                fmsg.textContent = "";
+                }
+            setTimeout(flash_disappear,3000);
+const file = document.querySelector('.file');
+file.addEventListener('change', (e) => {
+  // Get the selected file
+  const [file] = e.target.files;
+  // Get the file name and size
+  const { name: fileName, size } = file;
+  // Convert size in bytes to kilo bytes
+  const fileSize = (size / 1000).toFixed(2);
+  // Set the text content
+  const fileNameAndSize = `${fileName} - ${fileSize}KB`;
+  document.querySelector('.file-name').textContent = fileNameAndSize;
+});</script>
+</html>

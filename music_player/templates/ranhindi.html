@@ -1,0 +1,164 @@
+<!-- this if for randomn hindi songs-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Segoe UI:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">    
+<link rel="stylesheet"  href="../static/stylesheets/theme.css">
+    <title>PlayUrVibe</title>
+    <link rel="icon" href="../static/images/logo.svg" >
+    <style>
+        #playlist {
+        position: fixed;
+        width: 1000px;
+        padding: 10px;
+        height: 300px;
+        bottom: 100px;
+        top: 200px;
+        left: 200px;
+        font-size: 25px;
+        list-style: none;
+        text-align: left;
+        overflow-y: scroll;
+        font-family: "Segoe UI";
+        
+        }
+        .box img{
+            border-radius:5%;
+        }
+        h6 {
+        position: absolute;
+        top: 130px;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+
+        font-family: "Segoe UI";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 35px;
+        line-height: 12px;
+        text-align: center;
+
+        color: #dfdfdf;
+        }
+    
+        #audioPlayer {
+                position: fixed;
+                bottom: 0%;
+                top: 550px;
+                right: 14%;
+                width: 820px;
+                }
+    </style>
+</head>
+<body>
+    <h6 style="text-align:center">Songs</h6>
+
+    <!-- <div class="video">
+        <img src="bg1.mp4" alt="bg">
+    </div> --> 
+ 
+    <nav class="hov">
+        <div class="image">
+            <a href="/home">
+            <img src="../static/images/logo.svg"> 
+            </a>
+           </div>
+        <div class="logo">    
+            <h4>PlayUrVibe</h4>
+        </div>
+        <ul class="nav-links1">
+            <li><a href="/home">Home</a></li>
+            <li><a href="/random">Random mode</a></li>
+            <li><a href="/emotion">Emotion mode</a></li>
+            <li><a href="/feedback">Contact</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+        </nav>
+        <audio src="" controls id="audioPlayer"  controlsList="nodownload" >
+           
+        </audio>
+        <div class="box">
+            {% for mess in get_flashed_messages() %}
+                <div class="" role="alert">
+                <p style="color: rgb(194, 49, 49); font-family: Segoe UI; text-align: center;" id= 'f-msg' >{{mess}}</p>
+                </div>
+            {% endfor %}
+            <ul id="playlist">
+                <li><a href="../static/songs/hindi/happy/balam pichkari.mp3"><img src="../static/songs/hindi/happy/balam pichkari.jpg"  width="80px" height="80px"> Balam Pichkari</a></li>
+                <li><a href="../static/songs/hindi/happy/cham cham.mp3"><img src="../static/songs/hindi/happy/cham cham.jpg" width="80px" height="80px"> Cham Cham</a></li>
+                <li><a href="../static/songs/hindi/happy/chogada.mp3"><img src="../static/songs/hindi/happy/chogada.jpg" width="80px" height="80px"> Chogada</a></li>
+                <li><a href="../static/songs/hindi/happy/cutipie.mp3"><img src="../static/songs/hindi/happy/cutipie.jpg" width="80px" height="80px"> Cutipie</a></li>
+                <li><a href="../static/songs/hindi/happy/gallan goodiyan.mp3"><img src="../static/songs/hindi/happy/gallan goodiyan.jpg" width="80px" height="80px"> Gallan goodiyan</a></li>
+                <li><a href="../static/songs/hindi/happy/high heels.mp3"><img src="../static/songs/hindi/happy/high heels.jpg" width="80px" height="80px"> High Heels</a></li>
+                <li><a href="../static/songs/hindi/happy/high rated gabru.mp3"><img src="../static/songs/hindi/happy/high rated gabru.jpg" width="80px" height="80px"> High Rated Gabru</a></li>
+                <li><a href="../static/songs/hindi/happy/love you zindagi.mp3"><img src="../static/songs/hindi/happy/love you zindagi.jpg" width="80px" height="80px"> Love You Zindagi</a></li>
+                <li><a href="../static/songs/hindi/happy/oh ho ho.mp3"><img src="../static/songs/hindi/happy/oh ho ho.jpg" width="80px" height="80px"> Oh ho ho </a></li>
+                <li><a href="../static/songs/hindi/happy/Pallo Latke.mp3"><img src="../static/songs/hindi/happy/Pallo Latke.jpg" width="80px" height="80px"> Pallo Latke</a></li>
+                <li><a href="../static/songs/hindi/sad/aayat.mp3"><img src="../static/songs/hindi/sad/aayat.jpg" width="80px" height="80px"> Aayat</a></li>
+                <li><a href="../static/songs/hindi/sad/Chunar.mp3"><img src="../static/songs/hindi/sad/chunar.jpg" width="80px" height="80px"> Chunar</a></li>
+                <li><a href="../static/songs/hindi/sad/Darkhaast.mp3"><img src="../static/songs/hindi/sad/darkhaast.jpg" width="80px" height="80px"> Darkhaast</a></li>
+                <li><a href="../static/songs/hindi/sad/Lae Dooba.mp3"><img src="../static/songs/hindi/sad/lae dooba.jpg" width="80px" height="80px"> Lae Dooba</a></li>
+                <li><a href="../static/songs/hindi/sad/Luka chuppi.mp3"><img src="../static/songs/hindi/sad/luka chuppi.jpg" width="80px" height="80px"> Luka Chuppi</a></li>
+                <li><a href="../static/songs/hindi/sad/Naina.mp3"><img src="../static/songs/hindi/sad/naina.jpg" width="80px" height="80px"> Naina</a></li>
+                <li><a href="../static/songs/hindi/sad/tera Yaar Hoon Main.mp3"><img src="../static/songs/hindi/sad/tera yaar hu main.jpg" width="80px" height="80px"> Tera Yaar Hu Main</a></li>
+                <li><a href="../static/songs/hindi/sad/Teri mitti.mp3"><img src="../static/songs/hindi/sad/teri mitti.jpg" width="80px" height="80px"> Teri Mitti</a></li>
+                <li><a href="../static/songs/hindi/sad/Thodi der.mp3"><img src="../static/songs/hindi/sad/thodi der.jpg" width="80px" height="80px"> Thodi Der</a></li>
+                <li><a href="../static/songs/hindi/energetic/Badal Pe Paon Hain.mp3"><img src="../static/songs/hindi/energetic/badal pe paon hai.jpg" width="80px" height="80px"> Badal pe paon hai</a></li>
+                <li><a href="../static/songs/hindi/energetic/Beh chala.mp3"><img src="../static/songs/hindi/energetic/beh chala.jpg" width="80px" height="80px"> Beh chala</a></li>
+                <li><a href="../static/songs/hindi/energetic/haar maidan fateh.mp3"><img src="../static/songs/hindi/energetic/haar maidan fateh.jpg" width="80px" height="80px"> Kar har maidan fateh</a></li>
+                <li><a href="../static/songs/hindi/energetic/Chak De India.mp3 .mp3"><img src="../static/songs/hindi/energetic/chak de india.jpg" width="80px" height="80px"> Chak de India</a></li>
+                <li><a href="../static/songs/hindi/energetic/Jagga jiteya.mp3"><img src="../static/songs/hindi/energetic/jaaga jiteya.jpg" width="80px" height="80px"> Jagga Jiteya</a></li>
+                <li><a href="../static/songs/hindi/energetic/lakshya.mp3"><img src="../static/songs/hindi/energetic/lakshya.jpg"width="80px" height="80px"> Lakshya</a></li>
+                <li><a href="../static/songs/hindi/energetic/Patakha guddi.mp3"><img src="../static/songs/hindi/energetic/patakha guddi.jpg" width="80px" height="80px"> Patakha Guddi</a></li>
+                <li><a href="../static/songs/hindi/energetic/Vande Mataram.mp3"><img src="../static/songs/hindi/energetic/vande mataram.jpg" width="80px" height="80px"> Vande Mataram</a></li>
+                <li><a href="../static/songs/hindi/energetic/Yahan Ke Hum Sikandar.mp3 .mp3"><img src="../static/songs/hindi/energetic/yahan ke hum sikandar.jpg" width="80px" height="80px"> Yaha Ke Hum Sikandar</a></li>
+                <li><a href="../static/songs/hindi/angry/ya rabba.mp3"><img src="../static/songs/hindi/angry/ya rabba.jpg" width="80px" height="80px"> Ya rabba</a></li>
+                <li><a href="../static/songs/hindi/angry/Bulleya.mp3"><img src="../static/songs/hindi/angry/bulleya.jpg" width="80px" height="80px"> Bulleya</a></li>
+                <li><a href="../static/songs/hindi/angry/Jee Le Zara.mp3"><img src="../static/songs/hindi/angry/jee le zara.jpg" width="80px" height="80px"> Jee le Zara</a></li>
+                <li><a href="../static/songs/hindi/angry/Kurbaan .mp3"><img src="../static/songs/hindi/angry/kurbaan.jpg" width="80px" height="80px"> Kurbaan</a></li>
+                <li><a href="../static/songs/hindi/angry/aas pass khuda.mp3"><img src="../static/songs/hindi/angry/aas pass khuda.jpg" width="80px" height="80px"> Aas Paas khuda</a></li>
+                <li><a href="../static/songs/hindi/angry/Maula Mere Le Le Meri Jaan.mp3"><img src="../static/songs/hindi/angry/maula mere le le meri jaan.jpg" width="80px" height="80px"> Maula mere le le meri jaan</a></li>
+                <li><a href="../static/songs/hindi/angry/nadaan parinde.mp3"><img src="../static/songs/hindi/angry/nadaan parinde.jpg" width="80px" height="80px"> Naadan parinde</a></li>
+                <li><a href="../static/songs/hindi/angry/Ae Dil Hai Mushkil.mp3"><img src="../static/songs/hindi/angry/ae dil hai mushkil.jpg" width="80px" height="80px"> Ae Dil Hai mushkil</a></li>
+            </ul>
+        </div>
+        
+            <button class="prev" href="#" onclick="playlist.prevTrack();"><img src="../static/images/prev.png" width="40px" height="40px"></button>
+            <button class="next" href="#" onclick="playlist.nextTrack();"><img src="../static/images/next.png" width="40px" height="40px"></button>
+            <!--<a href="#" onclick="playlist.toggleShuffle();">Toggle Shuffle</a>-->
+        <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+        <script src="../static/scripts/songs.js"></script>
+   
+        <script>
+            
+            /*
+        Default constructor configuration:
+            autoplay: false,
+            shuffle: false,
+            loop: false,
+            playerId: "audioPlayer",
+            playlistId: "playlist",
+            currentClass: "current-song"  
+    */
+            // loads the audio player
+            var fmsg = document.getElementById("f-msg");
+            function flash_disappear(){
+                fmsg.textContent = "";
+                }
+            setTimeout(flash_disappear,3000); 
+            var config = {
+              autoplay: true, 
+                loop: true,
+                shuffle: true
+            };
+            var playlist = new AudioPlaylist();
+        </script>
+        </nav>
+        </body>
+        </html>
